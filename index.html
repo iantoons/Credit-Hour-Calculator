@@ -8,6 +8,7 @@
     <title>
         Credit Hour Calculator
     </title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/sb-admin.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -18,7 +19,7 @@
 <div id="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Credit Hour Calculator</a>
+            <a class="navbar-brand" href="#" >PGCC Credit Hour Calculator</a>
         </div>
     </nav>
     <div id="page-wrapper" class="float-right">
@@ -33,69 +34,106 @@
                             <td style="width: 5%"><label>Number of Credits</label></td>
                             <td style="width: 5%" class="text-center"><label>Direct instruction time per credit in clock hours</label></td>
                             <td style="width:  5%" class="text-center"><label>Total number of clock hours of direct instruction time</label></td>
+                            <td style="width:  5%" class="text-center"><label>Out of class student work per credit in clock hours</label></td>
+                            <td style="width:  5%" class="text-center"><label>Total Number of clock hours of out of class student work</label></td>
+                            <td style="width:  5%" class="text-center"><label>Combined Instructional Time</label></td>
+                            <td style="width:  2%" class="text-center"><label>Remove</label></td>
                         </tr>
                         </thead>
                         <tbody id="itemlist">
                         <!-- LECTURE 1 -->
                         <tr>
                             <td>Lecture</td>
-                            <td><input class="form-control input-sm" data-cell="B1"></td>
-                            <td data-cell="C1">12.5</td>
-                            <td><input class="form-control input-sm text-right" data-cell="D1" data-format="0[.]00" data-formula="B1 * C1"></td>
+                            <td><input class="form-control input-sm" data-cell="B0"></td>
+                            <td><input class="form-control input-sm" data-cell="C0" value="12.5" disabled></td>
+                            <td><input class="form-control input-sm text-right" data-cell="D0" data-format="0[.]00" data-formula="B0 * C0"></td>
+                            <td><input class="form-control input-sm" data-cell="E0" value="25" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F0" data-format="0[.]00" data-formula="B0 * E0"></td>
+                            <td><input class="form-control input-sm" data-cell="G0" data-format="0[.]00" data-formula="D0 + F0"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
+
                         </tr>
                         <!-- LAB 2 -->
                         <tr>
                             <td>Lab (standard)</td>
                             <td><input class="form-control input-sm" data-cell="B2"></td>
-                            <td data-cell="C2">25</td>
+                            <td><input class="form-control input-sm" data-cell="C2" value="25" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D2" data-format="0[.]00" data-formula="B2 * C2"></td>
+                            <td><input class="form-control input-sm" data-cell="E2" value="12.5" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F2" data-format="0[.]00" data-formula="B2 * E2"></td>
+                            <td><input class="form-control input-sm" data-cell="G2" data-format="0[.]00" data-formula="D2 + F2"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         <!-- Lab (nursing, allied health, some science courses) 3 -->
                         <tr>
                             <td>Lab (nursing, allied health, some science courses)</td>
                             <td><input class="form-control input-sm" data-cell="B3"></td>
-                            <td data-cell="C3">37.5</td>
+                            <td><input class="form-control input-sm" data-cell="C3" value="37.5" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D3" data-format="0[.]00" data-formula="B3 * C3"></td>
+                            <td><input class="form-control input-sm" data-cell="E3" value="12.5" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F3" data-format="0[.]00" data-formula="B3 * E3"></td>
+                            <td><input class="form-control input-sm" data-cell="G3" data-format="0[.]00" data-formula="D3 + F3"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         <!-- Studio 4 -->
                         <tr>
                             <td>Studio</td>
                             <td><input class="form-control input-sm" data-cell="B4"></td>
-                            <td data-cell="C4">25</td>
+                            <td><input class="form-control input-sm" data-cell="C4" value="24" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D4" data-format="0[.]00" data-formula="B4 * C4"></td>
+                            <td><input class="form-control input-sm" data-cell="E4" value="12.5" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F4" data-format="0[.]00" data-formula="B4 * E4"></td>
+                            <td><input class="form-control input-sm" data-cell="G4" data-format="0[.]00" data-formula="D4 + F4"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         <!-- PRIVATE LESSON 5 -->
                         <tr>
                             <td>Private Lesson</td>
                             <td><input class="form-control input-sm" data-cell="B5"></td>
-                            <td data-cell="C5">12.5</td>
+                            <td><input class="form-control input-sm" data-cell="C5" value="12.5" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D5" data-format="0[.]00" data-formula="B5 * C5"></td>
+                            <td><input class="form-control input-sm" data-cell="E5" value="12.5" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F5" data-format="0[.]00" data-formula="B5 * E5"></td>
+                            <td><input class="form-control input-sm" data-cell="G5" data-format="0[.]00" data-formula="D5 + F5"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         <!-- CLINICAL 6 -->
                         <tr>
                             <td>Clinical</td>
                             <td><input class="form-control input-sm" data-cell="B6"></td>
-                            <td data-cell="C6">37.5</td>
+                            <td><input class="form-control input-sm" data-cell="C6" value="37.5" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D6" data-format="0[.]00" data-formula="B6 * C6"></td>
+                            <td><input class="form-control input-sm" data-cell="E6" value="0" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F6" data-format="0[.]00" data-formula="B6 * E6"></td>
+                            <td><input class="form-control input-sm" data-cell="G6" data-format="0[.]00" data-formula="D6 + F6"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         <!-- FIELDWORK 7 -->
                         <tr>
                             <td>Fieldwork</td>
                             <td><input class="form-control input-sm" data-cell="B7"></td>
-                            <td data-cell="C7">37.5</td>
+                            <td><input class="form-control input-sm" data-cell="C7" value="37.5" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D7" data-format="0[.]00" data-formula="B7 * C7"></td>
+                            <td><input class="form-control input-sm" data-cell="E7" value="0" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F7" data-format="0[.]00" data-formula="B7 * E7"></td>
+                            <td><input class="form-control input-sm" data-cell="G7" data-format="0[.]00" data-formula="D7 + F7"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         <!-- INTERNSHIP 8 -->
                         <tr>
                             <td>Internship</td>
                             <td><input class="form-control input-sm" data-cell="B8"></td>
-                            <td data-cell="C8">0.67</td>
+                            <td><input class="form-control input-sm" data-cell="C8" value="0.67" disabled></td>
                             <td><input class="form-control input-sm text-right" data-cell="D8" data-format="0[.]00" data-formula="B8 * C8"></td>
+                            <td><input class="form-control input-sm" data-cell="E8" value="50" disabled></td>
+                            <td><input class="form-control input-sm" data-cell="F8" data-format="0[.]00" data-formula="B8 * E8"></td>
+                            <td><input class="form-control input-sm" data-cell="G8" data-format="0[.]00" data-formula="D8 + F8"></td>
+                            <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
                         </tr>
                         </tbody>
                         <tr>
                             <td>
-                                <button id="add_item" class="btn btn-sm btn-primary">Add Item</button>
+                                <button id="add_item" class="btn btn-sm btn-primary">Add Class</button>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -115,14 +153,6 @@
 
 </footer>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue">
-
-    <div class="footer-copyright text-center py-3">Source Code Available in
-        <a href="https://github.com/TeamHeroes/teamheroes.github.io"> Github.com</a>
-    </div>
-
-</footer>
 <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
 <script src="js/jquery-calx-sample-2.2.8.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js" type="text/javascript"></script>
@@ -140,10 +170,18 @@
                 <td><input class="form-control input-sm text-right " data-cell="B'+i+'" data-format="0[.]00"></td>\
                 <td><input class="form-control input-sm text-right" data-cell="C'+i+'" data-format="0[.]00"></td>\
                 <td><input class="form-control input-sm text-right" data-cell="D'+i+'" data-format="0[.]00" data-formula="B'+i+' * C'+i+'"></td>\
+                <td><input class="form-control input-sm text-right" data-cell="E'+i+'" data-format="0[.]00"></td>\
+                <td><input class="form-control input-sm text-right" data-cell="F'+i+'" data-format="0[.]00" data-formula="B'+i+' * E'+i+'"></td>\
+                <td><input class="form-control input-sm text-right" data-cell="G'+i+'" data-format="0[.]00" data-formula="D'+i+' + F'+i+'"></td>\
                 <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>\
             </tr>'
         );
         //console.log('new row appended');
+
+
+        //button in case needed
+        //<td class="text-center"><button class="btn-remove btn btn-sm btn-danger" float="left"><i class="fa fa-times fa-fw"></i></button></td>
+
 
         $form.calx('update');
         $form.calx('getCell', 'G1').setFormula('SUM(F1:F'+i+')');
