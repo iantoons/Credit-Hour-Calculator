@@ -218,15 +218,20 @@
         $(this).parent().parent().remove();
         $form.calx('update');
         $form.calx('getCell', 'H1').calculate();
+
+        $(this).parent().parent().remove();
+        $form.calx('update');
+        $form.calx('getCell', 'J1').calculate();
+
+        $(this).parent().parent().remove();
+        $form.calx('update');
+        $form.calx('getCell', 'L1').calculate();
+
+        $(this).parent().parent().remove();
+        $form.calx('update');
+        $form.calx('getCell', 'M1').calculate();
     });
 
-    for(var i=50; i<=67; i++){
-        var select = document.getElementById("hours");
-        var option = document.createElement("OPTION");
-        select.options.add(option);
-        option.text = i;
-        option.value = i;
-    }
 </script>
 </body>
 
