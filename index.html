@@ -147,7 +147,7 @@
                         <tr>
                             <td>
                                 <button id="add_item" class="btn btn-sm btn-primary">Add Class</button>
-                                <button class="btn btn-sm btn-primary" onClick="window.print()">Print Page</button>
+                                <button class="btn btn-sm btn-primary" id="pagePrint" >Print Page</button>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -232,7 +232,7 @@
         $form.calx('getCell', 'M1').calculate();
     });
 
-    /* disable enter key from deleting fields */
+    // disable enter key from deleting fields
     $(document).ready(function () {
         $("form").bind("keypress", function (e) {
             if (e.keyCode === 13)
@@ -242,6 +242,15 @@
         });
     });
 
+
+    //print function
+    $( document ).ready(function() {
+        $('#pagePrint').click(function()
+        {
+            window.print();
+            return false;
+        });
+    });
 </script>
 </body>
 
