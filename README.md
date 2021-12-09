@@ -7,7 +7,11 @@ A credit hour calculator for ease of use by Prince Georges Community College Fac
 **[Implementation](#implementation)**<br>
 
 ## Built Using:
-HTML
-[Bootstrap (CSS)](https://getbootstrap.com/ "Bootstrap (CSS)")
-[jQuery](https://jquery.com/ "jQuery")
-[CalX](https://github.com/xsanisty/calx.js "CalX")
+- HTML
+- [Bootstrap (CSS)](https://getbootstrap.com/ "Bootstrap (CSS)")
+- [jQuery](https://jquery.com/ "jQuery")
+- [CalX](https://github.com/xsanisty/calx.js "CalX")
+
+## Calculations
+
+## Implementation
